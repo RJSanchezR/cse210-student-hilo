@@ -1,15 +1,37 @@
 import random
 
 
+class Dealer:
+    def __init__(self, random_num):
+        self.random_num = random_num
+
+    def print_card(self):
+        print(f"Number: {self.random_num}")
+
+    def return_card(self):
+        return self.random_num
+
+
+class Guess:
+    def __init__(self, guess):
+        self.guess = input("Do you think the next card is high or low(h/l): ")
+
+
 def main():
     play_again = 'y'
     score = 300
-    first_card = random.randint(1, 13)
+
+    first_card = Dealer(random.randint(1, 13))
+
+    first_card.print_card()
+
     while play_again.lower() != 'n':
         print()
+
         print(f"Number: {first_card}")
         print(f"Your score: {score}")
         h_l = input("Do you think the next card is high or low(h/l): ")
+
         returned = check_guess(h_l, first_card, score)
         first_card = returned[1]
         score = returned[0]
@@ -67,4 +89,5 @@ def check_guess(h_l, first_card, score):
     return score, first_card
 
 
-main()
+if __name__ == "__main__":
+    main()
