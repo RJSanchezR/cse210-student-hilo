@@ -1,7 +1,6 @@
 import random
 
 
-<<<<<<< Updated upstream
 def main():
     play_again = 'y'
     score = 300
@@ -66,7 +65,9 @@ def check_guess(h_l, first_card, score):
         print()
     first_card = second_card
     return score, first_card
-=======
+
+
+== == == =
 '''
     Dealer
     player
@@ -111,7 +112,6 @@ def main():
             quit()
         else:
             print("error, please type either 'y' or 'n' ")
->>>>>>> Stashed changes
 
 
 main()
