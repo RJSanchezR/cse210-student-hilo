@@ -77,7 +77,7 @@ class Director:
 
         if self.dealer.can_play():
             choice = input("Do you want to keep playing? [y/n]: ")
-            self.keep_playing = (choice == "y" or choice == "Y")
+            self.keep_playing = (choice.lower() == 'y')
             if self.keep_playing is not True:
                 print("Thanks for playing with us.")
                 print(f"Your final score is: {self.dealer.score}")
