@@ -65,3 +65,6 @@ def check_guess(h_l, first_card, score):
         print()
     first_card = second_card
     return score, first_card
+
+
+main()
