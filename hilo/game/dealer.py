@@ -13,7 +13,8 @@ class Dealer:
             Self (Dealer): An instance of Dealer.
         """
         self.score = 300
-        self.new_card = 0
+        self.new_card = random.randint(1,13)
+        # The current card will always be the new card before it changes
         self.current_card = self.new_card
 
     def draw_card(self):
@@ -55,12 +56,16 @@ class Dealer:
         if guess == "h":
             if self.new_card > self.current_card:
                 return 100
+            elif self.new_card == self.current_card:
+                print("The cards changed, the score will stay the same.")
             else:
                 return (-75)
         
-        if guess == "l":
+        elif guess == "l":
             if self.new_card < self.current_card:
                 return 100
+            elif self.new_card == self.current_card:
+                print("The cards changed, the score will stay the same.")
             else:
                 return (-75)
     
