@@ -69,7 +69,8 @@ class Director:
         print(f"Your score is: {self.dealer.score}")
 
     def play_again(self):
-        """Verify if the users can play again and if they want to do it.
+        """Verify if the users can play again. If they can then it asks if
+        they want to do it.
 
         Args:
             self (Director): An instance of Director.
