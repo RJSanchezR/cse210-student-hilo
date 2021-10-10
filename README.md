@@ -47,4 +47,7 @@ root                    (project root folder)
 
 ---
 
-- TODO: Add your names and emails here
+- Rodrigo Sanchez
+- Carly West
+- Sierra Davenport
+- Dexter Davenport
